@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div  class="row">
+      <div class="col-sm p-3" *ngFor="let album of albums">
+          <div class="card p-3 border" style="height: 100%; width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-wrap">{{album.title}}</h5>
+                <a class="btn btn-bottom btn-primary" style="bottom: 1rem;" [routerLink]="['/album', album.id, album.title]">Browse</a>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+

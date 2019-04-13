@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row p-3">
+      <h5 class="card-title text-wrap">{{title}}</h5>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4 p-3 " *ngFor="let photo of photos">
+          <div class="card-deck p-3 border" style="height: 100%; width: 18rem;">
+              <img src="{{photo.thumbnailUrl}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-wrap">{{photo.title}}</h5>
+                <p class="btn btn-primary" (click)="viewPhoto(photo)">View</p>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
